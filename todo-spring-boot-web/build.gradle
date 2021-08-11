@@ -1,6 +1,9 @@
+import sun.lwawt.macosx.CImage
+
 plugins {
 	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'com.google.cloud.tools.jib' version '3.1.2'
 	id 'java'
 	id 'idea'
 }
@@ -8,6 +11,12 @@ plugins {
 group = 'com.incorta.sample'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '8'
+
+jib {
+	to {
+		image = 'yelhady/todo-spring-boot-web'
+	}
+}
 
 repositories {
 	mavenCentral()
