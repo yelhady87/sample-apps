@@ -7,8 +7,9 @@ The server starts on `http://localhost:3000`
 
 # Endpoints
 
-- `GET /echo` => respond with `Hello from Echo Server`
-- `GET /echo?message=test` => responds with `Hello from test`
+- `GET /` => respond with `Hello from Echo Server`
+- `GET /echo-server` => respond with `Hello from Echo Server`
+- `GET /echo-server?message=test` => responds with `Hello from test`
 
 ---
 

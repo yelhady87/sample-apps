@@ -1,5 +1,7 @@
 import sun.lwawt.macosx.CImage
 
+import java.sql.Timestamp
+
 plugins {
 	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -16,7 +18,13 @@ jib {
 	to {
 		image = 'yelhady/todo-spring-boot-web'
 	}
+
+	container {
+		creationTime = "USE_CURRENT_TIMESTAMP"
+	}
 }
+
+//jib.container.useCurrentTimestamp=true
 
 repositories {
 	mavenCentral()
